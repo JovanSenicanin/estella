@@ -1,0 +1,304 @@
+ /* CSS styles for the chatbot interface */
+ body {
+    background-color: #ffffe7;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    background-size: cover;
+    color: #ffffe7;
+}
+#chat-container {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 550px;
+    border: 1px solid #fd1067;
+    border-left: 0px;
+    background: transparent;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.inputfield {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    padding: 9px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, #491b4d, #fd1067);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input {
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: #ffffe7;
+    border: 1px solid #491b4d;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.button {
+    height: 37px;
+    width: 20%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #0b4342;
+    color: #ffffe7;
+}
+
+.button:hover {
+    background-color: #df1067;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+  'color' #ffffe7,
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0b4342;
+    padding: 9px;
+    align-items: baseline;
+    z-index: 2;
+}
+
+.img {
+    position: absolute;
+    top: 11px;
+    right: 75px;
+    width: 75px;
+    height: 75px;
+}
+
+.message {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(0px);
+    animation: letterIn 0.6s forwards;
+}
+
+@keyframes letterIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.🙂 {
+    width: 70%;
+    align-self: flex-start;
+    font-weight: normal;
+    color: #0b4342;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 9px;
+    background-color: #fef08c;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    word-wrap: break-word;
+    word-break: break-word;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.🤖 {
+    width: 70%;
+    align-self: flex-end;
+    font-weight: normal;
+    color: #491b4d;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 9px;
+    background-color: #ffe5e9;
+    border-radius: 15px;
+    word-wrap: break-word; 
+    word-break: break-word;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 0.5s forwards;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+    
+::-webkit-scrollbar-thumb {
+    background: #0b4342; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fd1067; 
+}
+
+.status {
+    background-color: lime;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+i {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    left: 30px;
+    top: 72px;
+}
+
+.p1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    position: fixed;
+    bottom: 2px;
+    left: 10px;
+    float: left;
+}
+
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+    float: right;
+}
+
+/*Side bar menu*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #491b4d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 3;
+}
+
+.logo {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffe7;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #fef08c;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.hamburger {
+    position: fixed;
+    top: 25px;
+    right: 15px;
+    font-size:30px;
+    cursor: pointer;
+    color: #ffffe7
+}
+
+/*Modal*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+.modal-content {
+    background-color: #ffffe7;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #491b4d;
+    border: 1px solid #fd1067;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+  
+.close {
+    color: #0b4342;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close2 {
+    color: #0b4342;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fd1067;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #fd1067;
+    text-decoration: none;
+    cursor: pointer;
+}
