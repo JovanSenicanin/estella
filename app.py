@@ -12,7 +12,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # If running locally without env, fallback
 if not openai_api_key:
-    openai_api_key = "sk-..."  # Optional: use for local testing
+    openai_api_key = "sk-proj-b199YOxjL0CxWM11ozg2T3BlbkFJidoS82AtjQkjzIVmBwY7"  # Optional: use for local testing
 
 # Read the prompt from the file
 with open('website_text.txt', 'r', encoding='utf-8') as f:
